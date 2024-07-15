@@ -1,0 +1,154 @@
+@use "../text_style";
+@use "../home.scss";
+$whiteColor: white;
+.dark header {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.dark footer {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.dark .yellow_section {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.About_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 0 0;
+  @media (max-width: 990px) {
+    flex-direction: column;
+  }
+  h1 {
+    @include text_style.text(200px, 64px, 700, 100px, left);
+    color: $whiteColor;
+  }
+  dl {
+    .put {
+      @include text_style.text(730px, 18px, 600, 28px, left);
+      color: $whiteColor;
+      padding-top: 40px;
+    }
+  }
+}
+.right_img {
+  text-align: right;
+  margin-top: -70px;
+}
+.Meet_bg {
+  position: relative;
+  .left_circle {
+    text-align: left;
+    display: flex;
+    align-self: start;
+    margin-top: -140px;
+  }
+  .bottom_img {
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+    bottom: -5px;
+  }
+  .Cards {
+    @media (max-width: 1055px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 700px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    width: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  background: #004047ff;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 140px 0 168px;
+  main {
+    background: #012e33ff;
+
+    height: 253px;
+    margin-top: 64px;
+    .card {
+      padding: 32px 106px 56px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  h1 {
+    @include text_style.text(100%, 48px, 700, 48px, center);
+    color: $whiteColor;
+  }
+  dd {
+    padding-top: 13px;
+    @include text_style.text(302px, 18px, 700, 28px, center);
+    color: rgba(121, 200, 199, 1);
+  }
+  i {
+    @include text_style.text(302px, 15px, 200, 25px, center);
+    color: $whiteColor;
+  }
+}
+.our_logos_bg {
+  position: relative;
+  background: #012e33ff;
+  .circile_img {
+    position: absolute;
+  }
+}
+.our_logos_section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 140px 0;
+  @media (max-width: 830px) {
+    padding: 210px 0 130px;
+    p {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  p {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 80px;
+    @media (max-width: 1190px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1060px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 730px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  h1 {
+    padding-bottom: 64px;
+    @include text_style.text(100%, 48px, 700, 48px, center);
+    color: $whiteColor;
+  }
+}
+.dark .About_bg {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.dark .Meet_bg {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.dark .our_logos_bg {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}

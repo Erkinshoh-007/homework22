@@ -1,0 +1,22 @@
+@mixin text(
+  $width: 49px,
+
+  $size: 18px,
+  $weight: 600,
+  $height: 28px,
+  $align: left
+) {
+  max-width: $width;
+
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  text-align: $align;
+}
+.left_img {
+  margin-left: -180px;
+}
+.bottom_image {
+  margin: 0 auto;
+}
+ 

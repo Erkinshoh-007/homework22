@@ -1,0 +1,345 @@
+@use "./text_style";
+* {
+  margin: 0;
+  padding: 0;
+}
+$whiteColor: white;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Livvic", sans-serif;
+}
+header,
+.bg_texts {
+  z-index: -11;
+  background-color: #014e57;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1222;
+}
+.dark .navbar-shrink {
+  background: rgb(93, 95, 93);
+}
+.navbar-shrink {
+  background: rgba(16, 224, 16, 0.5);
+}
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  padding: 53px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 710px) {
+    flex-direction: column;
+    gap: 20px;
+    .nav_menu,
+    .nav_btn {
+      display: none;
+    }
+
+    .active {
+      display: flex;
+    }
+    .activeBtn {
+      display: flex;
+    }
+    .icon {
+      display: block;
+    }
+    .nav_brand {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+.nav_brand {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.nav_menu {
+  display: flex;
+  gap: 40px;
+  li {
+    a {
+      @include text_style.text;
+      color: $whiteColor;
+    }
+  }
+}
+.btn_link {
+  padding: 10px 33px;
+  color: $whiteColor;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 56px;
+  @include text_style.text(163px, 18px, 600, 28px, left);
+}
+.icon {
+  width: 38px;
+  cursor: pointer;
+  display: none;
+}
+.sun {
+  width: 48px;
+  cursor: pointer;
+}
+
+.Texts {
+  padding: 130px 0 250px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1160px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .left_img {
+      display: none;
+    }
+  }
+  h1 {
+    color: $whiteColor;
+    @include text_style.text(635px, 100px, 700px, 100px);
+    span {
+      color: #f57d7d;
+    }
+  }
+  .second {
+    hr {
+      width: 50px;
+      height: 4px;
+      background: rgba(121, 200, 199, 1);
+      margin-bottom: 80px;
+    }
+    p {
+      color: $whiteColor;
+      @include text_style.text(445px, 18px, 600, 28px, left);
+    }
+  }
+}
+.bottom-image {
+  text-align: end;
+  img {
+    @media (max-width: 400px) {
+      width: 100%;
+      margin-top: -100px;
+    }
+  }
+}
+.left_img {
+  margin-left: -100px;
+}
+.build_bg {
+  background-color: #012e33ff;
+}
+.build_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 140px 0;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+  hr {
+    margin-bottom: 54px;
+    width: 50px;
+    height: 4px;
+    background: rgba(246, 126, 126, 1);
+  }
+  h1 {
+    color: $whiteColor;
+    @include text_style.text(445px, 48px, 700, 48px, left);
+  }
+  p {
+    color: #f57d7d;
+    @include text_style.text(445px, 18px, 700, 28px, left);
+  }
+  dd {
+    color: rgba(255, 255, 255, 0.8);
+    @include text_style.text(445px, 15px, 700, 25px, left);
+  }
+}
+.section_2 {
+  padding-top: 23px;
+  display: flex;
+  gap: 23px;
+  img {
+    width: 72px;
+    height: 72px;
+  }
+  dd {
+    padding-top: 16px;
+  }
+}
+.right_image {
+  text-align: right;
+  margin-top: -100px;
+  margin-right: -92px;
+  @media (max-width: 1199px) {
+    display: none;
+  }
+  @media (max-width: 1399px) {
+    display: none;
+  }
+}
+.success {
+  padding: 140px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    @include text_style.text(932px, 48px, 700, 48px, center);
+    color: $whiteColor;
+  }
+  p {
+    padding: 92px 0 24px;
+    @include text_style.text(350px, 15px, 700, 25px, center);
+    color: $whiteColor;
+  }
+  dd {
+    @include text_style.text(350px, 18px, 700, 28px, center);
+    color: rgba(121, 200, 199, 1);
+  }
+  dl {
+    padding: 3px 0 32px;
+    @include text_style.text(350px, 13px, 200, 18px, center);
+    color: $whiteColor;
+  }
+  .center_image {
+    text-align: center;
+  }
+}
+.box {
+  z-index: 55;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 520px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+}
+.double {
+  position: relative;
+  top: 112px;
+  z-index: -1;
+  // transform: translateX(130px);
+  @media (max-width: 1410px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.suc_bottom {
+  display: flex;
+  justify-content: end;
+}
+.yellow_section {
+  background: #f57d7dff;
+}
+.yellow_element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 260px;
+  padding: 76px 0 6px;
+  @media (max-width: 1199px) {
+    padding-bottom: 86px;
+    justify-content: space-between;
+    gap: 0;
+  }
+  @media (max-width: 707px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  h1 {
+    @include text_style.text(504px, 48px, 700, 38px, center);
+    color: rgba(1, 47, 52, 1);
+  }
+  p {
+    @include text_style.text(253px, 18px, 600, 28px, center);
+    color: rgba(1, 47, 52, 1);
+    padding: 10px 32px;
+    border-radius: 56px;
+    border: 2px solid rgba(1, 47, 52, 1);
+  }
+}
+.bottom3_img {
+  margin-top: -75px;
+}
+footer {
+  background: #002529ff;
+}
+.footer_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 0 55px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  .one {
+    p {
+      @include text_style.text(150px, 18px, 600, 28px, center);
+      color: $whiteColor;
+      word-spacing: 20px;
+      padding-top: 25px;
+    }
+  }
+  .two,
+  .three {
+    p {
+      @include text_style.text(200px, 15px, 600, 25px, left);
+      // padding-top: 25px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  .three {
+    p {
+      padding-top: 20px;
+    }
+  }
+}
+.dark header {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.dark footer {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.dark .bg_texts {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.dark .build_bg {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}
+.dark .yellow_section {
+  background-color: black;
+  border: 1px solid $whiteColor;
+  border-radius: 10px;
+}

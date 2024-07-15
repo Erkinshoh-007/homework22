@@ -1,0 +1,70 @@
+@use "../text_style";
+
+$whietColor: white;
+.add {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 880px) {
+    flex-direction: column;
+  }
+}
+section {
+  background: #014e57ff;
+  padding: 120px 0;
+}
+.contact {
+  h1 {
+    @include text_style.text(350px, 64px, 700, 100px, left);
+    color: $whietColor;
+  }
+  p {
+    padding: 16px 0 32px;
+    color: rgba(246, 126, 126, 1);
+    @include text_style.text(540px, 32px, 700, 48px, left);
+  }
+  main {
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 23px;
+    dd {
+      color: $whietColor;
+      @include text_style.text(445px, 18px, 700, 28px, left);
+    }
+  }
+}
+.about {
+  p {
+    @media (max-width: 350px) {
+      padding: 0 130px 20px 0;
+    }
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(121, 200, 199, 1);
+    padding: 0 330px 20px 0;
+    color: $whietColor;
+    @include text_style.text(445px, 15px, 600, 25px, left);
+  }
+  dfn {
+    padding: 11px 32px;
+    color: rgba(0, 64, 71, 1);
+    background: $whietColor;
+    @include text_style.text(445px, 18px, 600, 28px, left);
+    border-radius: 56px;
+  }
+}
+.dark header {
+  background-color: black;
+  border: 1px solid $whietColor;
+  border-radius: 10px;
+}
+.dark section {
+  background-color: black;
+  border: 1px solid $whietColor;
+  border-radius: 10px;
+}
+.dark footer {
+  background-color: black;
+  border: 1px solid $whietColor;
+  border-radius: 10px;
+}

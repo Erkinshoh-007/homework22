@@ -1,0 +1,101 @@
+.left_img {
+  margin-left: -180px;
+}
+
+.bottom_image {
+  margin: 0 auto;
+}
+
+.add {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 880px) {
+  .add {
+    flex-direction: column;
+  }
+}
+
+section {
+  background: #014e57;
+  padding: 120px 0;
+}
+
+.contact h1 {
+  max-width: 350px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 100px;
+  text-align: left;
+  color: white;
+}
+.contact p {
+  padding: 16px 0 32px;
+  color: rgb(246, 126, 126);
+  max-width: 540px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+}
+.contact main {
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 23px;
+}
+.contact main dd {
+  color: white;
+  max-width: 445px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+}
+
+.about p {
+  margin-bottom: 22px;
+  border-bottom: 1px solid rgb(121, 200, 199);
+  padding: 0 330px 20px 0;
+  color: white;
+  max-width: 445px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: left;
+}
+@media (max-width: 350px) {
+  .about p {
+    padding: 0 130px 20px 0;
+  }
+}
+.about dfn {
+  padding: 11px 32px;
+  color: rgb(0, 64, 71);
+  background: white;
+  max-width: 445px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  border-radius: 56px;
+}
+
+.dark header {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.dark section {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.dark footer {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+}
